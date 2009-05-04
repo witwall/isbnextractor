@@ -1,0 +1,12 @@
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ISBNextractor.Properties.Resources.resources
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ISBNextractor.csproj.GenerateResource.Cache
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\bin\Debug\ISBNextractor.exe
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\bin\Debug\ISBNextractor.pdb
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ISBNextractor.exe
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ISBNextractor.pdb
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ISBNextractor.Main.resources
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ISBNextractor.AssistenceIsNeeded.resources
+C:\Documents and Settings\admin\My Documents\Visual Studio 2008\Projects\hLibLite\ISBNextractor\ISBNextractor\obj\Debug\ISBNextractor.EnterISBN.resources

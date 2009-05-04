@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Assemblies Version="1073741836">
+  <Assembly Name="DevComponents.DotNetBar2, Version=7.7.0.2, Culture=neutral" Image="d04743a7-f68e-4292-af62-f948fab4757e" Timestamp="633640335480000000" XmlDocIndexTimestamp="633638015500000000" />
+  <Assembly Name="IKVM.GNU.Classpath, Version=0.20.0.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58" Image="228cdf53-15a3-46fa-a362-1eccafe8b005" Timestamp="633694790982031250" />
+  <Assembly Name="IKVM.Runtime, Version=0.20.0.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58" Image="6c55847c-08ad-4696-b1be-5cfdde6c6e4d" Timestamp="633694790326406250" />
+  <Assembly Name="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" Image="8107ee05-a3d2-4f58-829a-e72d6eb9e985" Timestamp="633473462720000000" />
+  <Assembly Name="MySql.Data, Version=5.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" Image="fb7b7f07-24bc-4aef-84ae-6298ffc5e656" Timestamp="633437642680000000" />
+  <Assembly Name="PDFBox-0.7.2, Version=0.0.0.0, Culture=neutral" Image="d1a6f38b-c5f5-47f8-8853-5e49ff6eb184" Timestamp="633694791018750000" />
+  <Assembly Name="RelatedObjects.Storage, Version=1.0.1405.31010, Culture=neutral" Image="c08d02cf-a803-470d-8396-85a0be38641d" Timestamp="632037320220000000" />
+  <Assembly Name="Tamir.SharpSSH, Version=1.1.1.13, Culture=neutral" Image="2b735b88-632c-4eb1-885d-2ec22b916298" Timestamp="633183128440000000" />
+  <Assembly Name="JetBrains.Annotations, Version=4.1.933.3, Culture=neutral, PublicKeyToken=1010a0d8d6380325" Image="596ff46c-d7e2-4cc4-b9cb-a4405844e7b1" Timestamp="633559706920000000" XmlDocIndexTimestamp="633559706920000000" />
+</Assemblies>

@@ -1,0 +1,1 @@
+chmdecoder.exe [-menu] chm_file [destination_path]
