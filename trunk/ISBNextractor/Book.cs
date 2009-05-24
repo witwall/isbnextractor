@@ -183,9 +183,11 @@ namespace ISBNextractor
 
             createBook(slikica, authors, true);
 
+            if (isscp.ToString() == "True") SendViaSCP(isbn, repoPath);
+
             return true;
 
-//            if (isscp.ToString() == "True")  SendViaSCP(isbn, repoPath);
+
 
  
 
@@ -345,14 +347,14 @@ namespace ISBNextractor
 
             saveMeta(fos, zos);
 
-            if (path.Contains("pdf"))
+       /*     if (path.Contains("pdf"))
             {
                 CreateSWF(path);
                 string swfPath = Application.StartupPath + "\\" + isbn + ".swf";
                 while (!File.Exists(swfPath)) { Thread.Sleep(2000); };
                 AddToZip(fos, zos, swfPath, isbn + ".swf");
                 System.IO.File.Delete(swfPath);
-            }
+            } */
 
             zos.close();
             fos.close();
