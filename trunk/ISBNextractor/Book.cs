@@ -391,7 +391,10 @@ namespace ISBNextractor
                     for (int i = 0; i < ReadBytes; i++) b2[i] = (byte)buffer[i];
                     zos.write(b2, 0, ReadBytes);
                 }
-                catch (System.IO.IOException) { break; }
+                catch (System.IO.IOException e) {
+                    File.AppendAllText("log_SAve.txt", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + ": " + name + Environment.NewLine);
+                    break; 
+                }
 
             zos.closeEntry();
         }
@@ -487,6 +490,7 @@ namespace ISBNextractor
             }
             catch (Exception)
             {
+                File.AppendAllText("log_save.txt", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + ": " + sourceFile + Environment.NewLine);
                 AddToZip( fos,  zos,  sourceFile,  destName);
             }
 

@@ -63,6 +63,7 @@ namespace ISBNextractor
             }
             catch
             {
+                File.AppendAllText("log_extract.txt", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + ": " + inFileName + Environment.NewLine);
                 return null;
             }
             finally
@@ -198,6 +199,7 @@ namespace ISBNextractor
             }
             catch
             {
+                File.AppendAllText("log_extract2.txt", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + ": "  + Environment.NewLine);
                 return "";
             }
         }

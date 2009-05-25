@@ -92,12 +92,18 @@ namespace ISBNextractor
 
         }
 
+        public static void Log(string Message)
+        {
+            File.AppendAllText("log.txt", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + ": " + Message + Environment.NewLine);
+        }
+
+
         private void ProcessBook(object state)
         {
             object[] s = (object[])state;
             
             Book currbook = s[0] as Book;
-
+           
          //   Book currbook = (Book)state;
          //   int br = currbook.Index;
             int br = (int)s[1];
@@ -161,7 +167,8 @@ namespace ISBNextractor
             }
             catch (Exception e) 
             {
-                MessageBox.Show(e.Message);
+              //  MessageBox.Show(e.Message);
+                File.AppendAllText("log_Parser.txt", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + ": " + e.Message+" "+filename + Environment.NewLine);
                 return (new ResultISBN(null, null));
             }
         }
@@ -186,7 +193,7 @@ namespace ISBNextractor
 
         private string AssistenceIsNeeded(string input)
         {
-            MessageBox.Show("Assistence");
+          //  MessageBox.Show("Assistence");
             return "";
         }
 
@@ -439,7 +446,15 @@ namespace ISBNextractor
 
         private void OpenBook_Click(object sender, EventArgs e)
         {
-            Process.Start(((Book)booklist.SelectedItems[0]).Path);
+            try
+            {
+                Process.Start(((Book)booklist.SelectedItems[0]).Path);
+            }
+            catch (Exception ea)
+            {
+                MessageBox.Show(ea.Message);
+            }
+            
         }
 
         private void zarn_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -468,6 +483,8 @@ namespace ISBNextractor
         private void SaveBookChanges_Click(object sender, EventArgs e)
         {
             Book currbook = selectedBook;
+
+            if (currbook == null) currbook = new Book("","");
 
             currbook.Isbn = propISBN.Text;
             currbook.Jezik = propLanguage.Text;
@@ -498,9 +515,12 @@ namespace ISBNextractor
                 done = false;
                 if (procId < booklist.Items.Count)
                 {
+                    Log("Poceo: " + ((Book)booklist.Items[procId]).Path );
                     booklist.Items[procId].ImageIndex = 2;
                     Thread grabData = new Thread(new ParameterizedThreadStart(ProcessBook));
                     grabData.Start(new object[] { (Book)booklist.Items[procId], procId });
+
+                    Log("Zavrsio: " + ((Book)booklist.Items[procId]).Path);
                     procId++;
                 }  else { isDone.Stop(); return;  }
             }
@@ -532,7 +552,11 @@ namespace ISBNextractor
 
         private void searchOnAmazon_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.amazon.com/s/ref=nb_ss_gw?url=search-alias%3Dstripbooks&field-keywords="+propTitle.Text);
+            try
+            {
+                Process.Start("http://www.amazon.com/s/ref=nb_ss_gw?url=search-alias%3Dstripbooks&field-keywords=" + propTitle.Text);
+            }
+            catch { }
         }
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using RelatedObjects.Storage;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace ISBNextractor
 {
@@ -51,7 +52,7 @@ namespace ISBNextractor
             }
             catch (Exception e)
             {
-                System.Windows.Forms.MessageBox.Show("CHMParser file:\n"+path+"\n\nError: "+e.Message);
+                File.AppendAllText("log_chm.txt", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + ": " + path +" ::: " +e.Message + Environment.NewLine);
             }
             return (new ResultISBN(null,null));
         }
