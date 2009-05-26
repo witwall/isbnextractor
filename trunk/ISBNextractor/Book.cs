@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
@@ -38,6 +39,63 @@ namespace ISBNextractor
         }
     }
 
+    [Serializable]
+    public class SimpleBook
+    {
+        private string path = "";
+        private string name="";
+        private string isbn = "";
+        private string naslov = "";
+        private string podnaslov = "";
+        private string jezik = "";
+        private string izdavac = "";
+        private string abstrakt = "";
+        private string stranica = "";
+        private string izdanje = "";
+        private int ImageIndex;
+        private Image slika;
+        ArrayList autori;
+        ArrayList tags;
+
+        public SimpleBook(Book b)
+        {
+            path = b.Path;
+            name = b.Name;
+            isbn = b.Isbn;
+            naslov = b.Naslov;
+            podnaslov = b.Podnaslov;
+            jezik = b.Jezik;
+            izdavac = b.Izdavac;
+            abstrakt = b.Abstrakt;
+            stranica = b.Stranica;
+            izdanje = b.Izdanje;
+            autori = b.Autori;
+            tags = b.Tags;
+            slika = b.Slika;
+            ImageIndex = b.ImageIndex;
+        }
+
+        public Book LoadData()
+        {
+            Book b = new Book(path,name);
+            b.Naslov = naslov;
+            b.Podnaslov = podnaslov;
+            b.Isbn = isbn;
+            b.Jezik = jezik;
+            b.Izdavac = izdavac;
+            b.Abstrakt = abstrakt;
+            b.Stranica = stranica;
+            b.Izdanje = izdanje;
+            b.Autori = autori;
+            b.Tags = tags;
+            b.Slika = slika;
+            b.ImageIndex = ImageIndex;
+
+            return b;
+        }
+    }
+
+
 
     public class Book : ListViewItem
     {
@@ -45,7 +103,12 @@ namespace ISBNextractor
         private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
 
         private string path = "", isbn="", naslov = "", podnaslov = "", jezik = "", izdavac = "", abstrakt = "", stranica = "", izdanje = "", authors = "";
+        ArrayList autori = new ArrayList();
+        ArrayList tags = new ArrayList();
+        private string name;
+        Image slika = Image.FromFile(Application.StartupPath + "\\noImage.png");
 
+        //protected Book(SerializationInfo info, StreamingContext context) : base(info, context) { }
         public string Izdanje
         {
             get { return izdanje; }
@@ -69,8 +132,7 @@ namespace ISBNextractor
             get { return izdavac; }
             set { izdavac = value; }
         }
-        ArrayList autori = new ArrayList();
-        ArrayList tags = new ArrayList();
+
 
         public ArrayList Tags
         {
@@ -107,7 +169,7 @@ namespace ISBNextractor
             get { return isbn; }
             set { isbn = value; }
         }
-        Image slika = Image.FromFile(Application.StartupPath + "\\noImage.png");
+
 
         public System.Drawing.Image Slika
         {
@@ -120,7 +182,7 @@ namespace ISBNextractor
             get { return path; }
             set { path = value; }
         }
-        string name;
+
 
         public string Name
         {

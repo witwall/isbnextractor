@@ -130,6 +130,13 @@ namespace ISBNextractor.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap up {
+            get {
+                object obj = ResourceManager.GetObject("up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap web_search {
             get {
                 object obj = ResourceManager.GetObject("web search", resourceCulture);

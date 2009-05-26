@@ -37,12 +37,8 @@
             this.Add = new System.Windows.Forms.ToolStripMenuItem();
             this.stateImages = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.saveBooks = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -50,12 +46,10 @@
             this.statusInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.rightPanel = new System.Windows.Forms.TabControl();
             this.Start = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Book = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.searchOnAmazon = new System.Windows.Forms.Button();
             this.propISBN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.propRelease = new System.Windows.Forms.TextBox();
@@ -64,9 +58,6 @@
             this.addPublisher = new System.Windows.Forms.Button();
             this.propPublisher = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.fromClipboard = new System.Windows.Forms.Button();
-            this.fromDisk = new System.Windows.Forms.Button();
-            this.slika = new System.Windows.Forms.Button();
             this.addLanguage = new System.Windows.Forms.Button();
             this.propLanguage = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -76,7 +67,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.propTitle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.zarn = new System.Windows.Forms.CheckedListBox();
             this.dodZarn = new System.Windows.Forms.TextBox();
@@ -87,17 +77,30 @@
             this.propAbstract = new System.Windows.Forms.RichTextBox();
             this.isDone = new System.Windows.Forms.Timer(this.components);
             this.saveTimer = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchOnAmazon = new System.Windows.Forms.Button();
+            this.fromClipboard = new System.Windows.Forms.Button();
+            this.fromDisk = new System.Windows.Forms.Button();
+            this.slika = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.saveBooks = new System.Windows.Forms.ToolStripButton();
+            this.saveButt = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.openButt = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.Start.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Book.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Abstract.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // booklist
@@ -165,6 +168,9 @@
             this.toolStripButton2,
             this.saveBooks,
             this.toolStripSeparator2,
+            this.openButt,
+            this.saveButt,
+            this.toolStripSeparator3,
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -172,55 +178,15 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::ISBNextractor.Properties.Resources.addd;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(26, 26);
-            this.toolStripButton1.Text = "Add book";
-            this.toolStripButton1.Click += new System.EventHandler(this.AddBookToList_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 29);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::ISBNextractor.Properties.Resources.play;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(26, 26);
-            this.toolStripButton2.Text = "Start Processing";
-            this.toolStripButton2.Click += new System.EventHandler(this.StartProcessing_Click);
-            // 
-            // saveBooks
-            // 
-            this.saveBooks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveBooks.Image = global::ISBNextractor.Properties.Resources.save;
-            this.saveBooks.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveBooks.Name = "saveBooks";
-            this.saveBooks.Size = new System.Drawing.Size(26, 26);
-            this.saveBooks.Text = "Generate ebook.zip";
-            this.saveBooks.Click += new System.EventHandler(this.saveBooks_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 29);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::ISBNextractor.Properties.Resources.info;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(26, 26);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // statusStrip1
             // 
@@ -282,15 +248,6 @@
             this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ISBNextractor.Properties.Resources.logoeLib;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 81);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -349,16 +306,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Book Info:";
-            // 
-            // searchOnAmazon
-            // 
-            this.searchOnAmazon.Image = global::ISBNextractor.Properties.Resources.web_search;
-            this.searchOnAmazon.Location = new System.Drawing.Point(291, 47);
-            this.searchOnAmazon.Name = "searchOnAmazon";
-            this.searchOnAmazon.Size = new System.Drawing.Size(27, 23);
-            this.searchOnAmazon.TabIndex = 48;
-            this.searchOnAmazon.UseVisualStyleBackColor = true;
-            this.searchOnAmazon.Click += new System.EventHandler(this.searchOnAmazon_Click);
             // 
             // propISBN
             // 
@@ -430,35 +377,6 @@
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Slika:";
-            // 
-            // fromClipboard
-            // 
-            this.fromClipboard.Image = global::ISBNextractor.Properties.Resources.paste;
-            this.fromClipboard.Location = new System.Drawing.Point(106, 183);
-            this.fromClipboard.Name = "fromClipboard";
-            this.fromClipboard.Size = new System.Drawing.Size(41, 34);
-            this.fromClipboard.TabIndex = 2;
-            this.fromClipboard.UseVisualStyleBackColor = true;
-            this.fromClipboard.Click += new System.EventHandler(this.fromClipboard_Click);
-            // 
-            // fromDisk
-            // 
-            this.fromDisk.Image = global::ISBNextractor.Properties.Resources.folder_image;
-            this.fromDisk.Location = new System.Drawing.Point(67, 183);
-            this.fromDisk.Name = "fromDisk";
-            this.fromDisk.Size = new System.Drawing.Size(41, 34);
-            this.fromDisk.TabIndex = 1;
-            this.fromDisk.UseVisualStyleBackColor = true;
-            this.fromDisk.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // slika
-            // 
-            this.slika.Image = global::ISBNextractor.Properties.Resources.noImage;
-            this.slika.Location = new System.Drawing.Point(4, 15);
-            this.slika.Name = "slika";
-            this.slika.Size = new System.Drawing.Size(143, 169);
-            this.slika.TabIndex = 0;
-            this.slika.UseVisualStyleBackColor = true;
             // 
             // addLanguage
             // 
@@ -536,16 +454,6 @@
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "ID(ISBN):";
-            // 
-            // button2
-            // 
-            this.button2.Image = global::ISBNextractor.Properties.Resources.globe;
-            this.button2.Location = new System.Drawing.Point(180, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 23);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -637,6 +545,130 @@
             // 
             this.saveTimer.Tick += new System.EventHandler(this.saveTimer_Tick);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 29);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ISBNextractor.Properties.Resources.logoeLib;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 81);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // searchOnAmazon
+            // 
+            this.searchOnAmazon.Image = global::ISBNextractor.Properties.Resources.web_search;
+            this.searchOnAmazon.Location = new System.Drawing.Point(291, 47);
+            this.searchOnAmazon.Name = "searchOnAmazon";
+            this.searchOnAmazon.Size = new System.Drawing.Size(27, 23);
+            this.searchOnAmazon.TabIndex = 48;
+            this.searchOnAmazon.UseVisualStyleBackColor = true;
+            this.searchOnAmazon.Click += new System.EventHandler(this.searchOnAmazon_Click);
+            // 
+            // fromClipboard
+            // 
+            this.fromClipboard.Image = global::ISBNextractor.Properties.Resources.paste;
+            this.fromClipboard.Location = new System.Drawing.Point(106, 183);
+            this.fromClipboard.Name = "fromClipboard";
+            this.fromClipboard.Size = new System.Drawing.Size(41, 34);
+            this.fromClipboard.TabIndex = 2;
+            this.fromClipboard.UseVisualStyleBackColor = true;
+            this.fromClipboard.Click += new System.EventHandler(this.fromClipboard_Click);
+            // 
+            // fromDisk
+            // 
+            this.fromDisk.Image = global::ISBNextractor.Properties.Resources.folder_image;
+            this.fromDisk.Location = new System.Drawing.Point(67, 183);
+            this.fromDisk.Name = "fromDisk";
+            this.fromDisk.Size = new System.Drawing.Size(41, 34);
+            this.fromDisk.TabIndex = 1;
+            this.fromDisk.UseVisualStyleBackColor = true;
+            this.fromDisk.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // slika
+            // 
+            this.slika.Image = global::ISBNextractor.Properties.Resources.noImage;
+            this.slika.Location = new System.Drawing.Point(4, 15);
+            this.slika.Name = "slika";
+            this.slika.Size = new System.Drawing.Size(143, 169);
+            this.slika.TabIndex = 0;
+            this.slika.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::ISBNextractor.Properties.Resources.globe;
+            this.button2.Location = new System.Drawing.Point(180, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 23);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ISBNextractor.Properties.Resources.addd;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(26, 26);
+            this.toolStripButton1.Text = "Add book";
+            this.toolStripButton1.Click += new System.EventHandler(this.AddBookToList_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::ISBNextractor.Properties.Resources.play;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(26, 26);
+            this.toolStripButton2.Text = "Start Processing";
+            this.toolStripButton2.Click += new System.EventHandler(this.StartProcessing_Click);
+            // 
+            // saveBooks
+            // 
+            this.saveBooks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveBooks.Image = global::ISBNextractor.Properties.Resources.up;
+            this.saveBooks.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveBooks.Name = "saveBooks";
+            this.saveBooks.Size = new System.Drawing.Size(26, 26);
+            this.saveBooks.Text = "Generate ebook.zip";
+            this.saveBooks.Click += new System.EventHandler(this.saveBooks_Click);
+            // 
+            // saveButt
+            // 
+            this.saveButt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveButt.Image = ((System.Drawing.Image)(resources.GetObject("saveButt.Image")));
+            this.saveButt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveButt.Name = "saveButt";
+            this.saveButt.Size = new System.Drawing.Size(26, 26);
+            this.saveButt.Text = "Save Session";
+            this.saveButt.ToolTipText = "Save Session";
+            this.saveButt.Click += new System.EventHandler(this.saveButt_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::ISBNextractor.Properties.Resources.info;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(26, 26);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // openButt
+            // 
+            this.openButt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openButt.Image = ((System.Drawing.Image)(resources.GetObject("openButt.Image")));
+            this.openButt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openButt.Name = "openButt";
+            this.openButt.Size = new System.Drawing.Size(26, 26);
+            this.openButt.Text = "Open Session";
+            this.openButt.Click += new System.EventHandler(this.openButt_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,7 +690,6 @@
             this.rightPanel.ResumeLayout(false);
             this.Start.ResumeLayout(false);
             this.Start.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Book.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -666,6 +697,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.Abstract.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -730,6 +762,9 @@
         private System.Windows.Forms.Timer isDone;
         private System.Windows.Forms.Button searchOnAmazon;
         private System.Windows.Forms.Timer saveTimer;
+        private System.Windows.Forms.ToolStripButton saveButt;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton openButt;
     }
 }
 

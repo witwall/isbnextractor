@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
@@ -12,6 +13,7 @@ using org.pdfbox.util;
 using System.Diagnostics;
 using System.Data.Odbc;
 using System.Runtime.InteropServices;
+using System.Collections;
 
 
 namespace ISBNextractor
@@ -200,6 +202,7 @@ namespace ISBNextractor
   #region Amazon
         private void GetDataFromAmazon(string isbn)
         {
+            propAuthors.Text = "";
             try
             {
                 int x;
@@ -410,7 +413,7 @@ namespace ISBNextractor
             propTitle2.Text = currbook.Podnaslov;
             propAbstract.Text = currbook.Abstrakt;
             slika.Image = currbook.Slika;
-
+            propAuthors.Text = "";
             foreach (string author in currbook.Autori)
                     propAuthors.Text += ((propAuthors.TextLength == 0) ? "" : ",") + author;
 
@@ -585,6 +588,36 @@ namespace ISBNextractor
                 }
                 else { saveTimer.Stop(); return; }
             }
+        }
+
+
+        private void saveButt_Click(object sender, EventArgs e)
+        {
+            Stream stream = File.Open("c:\\session.dat", FileMode.Create);
+            BinaryFormatter bformatter = new BinaryFormatter();
+
+            ArrayList simpleBookList = new ArrayList();
+            foreach (Book o in booklist.Items)
+                simpleBookList.Add(new SimpleBook(o));
+
+            bformatter.Serialize(stream, simpleBookList);
+            stream.Close();
+
+        }
+
+        private void openButt_Click(object sender, EventArgs e)
+        {
+            booklist.Clear();
+            booklist.Items.Clear();
+            ArrayList mp = null;
+            Stream stream = File.Open("c:\\session.dat", FileMode.Open);
+            BinaryFormatter bformatter = new BinaryFormatter();
+            mp = (ArrayList)bformatter.Deserialize(stream);
+
+            foreach (SimpleBook book in mp)
+                booklist.Items.Add(book.LoadData());
+
+            stream.Close();
         }
     }
 }
