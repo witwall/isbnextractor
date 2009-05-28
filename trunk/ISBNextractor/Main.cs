@@ -526,14 +526,12 @@ namespace ISBNextractor
                 done = false;
                 if (procId < booklist.Items.Count)
                 {
-                    Log("Poceo: " + ((Book)booklist.Items[procId]).Path );
                     booklist.Items[procId].ImageIndex = 2;
                     Thread grabData = new Thread(new ParameterizedThreadStart(ProcessBook));
                     grabData.Start(new object[] { (Book)booklist.Items[procId], procId });
-
-                    Log("Zavrsio: " + ((Book)booklist.Items[procId]).Path);
                     procId++;
                 }  else { isDone.Stop(); return;  }
+                ReCheck_Click(sender, e);
             }
         }
 
@@ -626,6 +624,12 @@ namespace ISBNextractor
                 booklist.Items.Add(book.LoadData());
 
             stream.Close();
+        }
+
+        private void ReCheck_Click(object sender, EventArgs e)
+        {
+            foreach(Book b in booklist.Items)
+                if (b.Naslov == "") b.ImageIndex = 6;
         }
     }
 }
