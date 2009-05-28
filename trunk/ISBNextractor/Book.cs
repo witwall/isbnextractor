@@ -237,7 +237,10 @@ namespace ISBNextractor
             repoPath = temp.ToString();
 
             // if we don't use local repository or SMB create an temp ebook
-            if (isscp.ToString() == "True") repoPath = Application.StartupPath; else repoPath = temp.ToString();
+            if (isscp.ToString() == "True") 
+                repoPath = Application.StartupPath; 
+            else repoPath = temp.ToString();
+
             repoPath += "\\" + isbn + ".ebook.zip";
 
 
@@ -245,7 +248,8 @@ namespace ISBNextractor
 
             createBook(slikica, authors, true);
 
-            if (isscp.ToString() == "True") SendViaSCP(isbn, repoPath);
+            if (isscp.ToString() == "True") 
+                SendViaSCP(isbn, repoPath);
 
             return true;
 

@@ -422,11 +422,18 @@ namespace ISBNextractor
                 zarn.SetItemCheckState(zarn.Items.IndexOf(tag), CheckState.Checked);
                 TagList.SetItemCheckState(zarn.Items.IndexOf(tag), CheckState.Checked);
             }
+
+            if (currbook.Naslov == "")
+            {
+                propTitle.Text = currbook.Name.Replace('.',' ').Replace("pdf","").Replace(':',' ').Replace("-"," ").Replace('_',' ').Trim();
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             GetDataFromAmazon(propISBN.Text);
+            sender = null;
             SaveBookChanges_Click(sender, e);
         }
 
@@ -508,7 +515,8 @@ namespace ISBNextractor
             for (int i = 0; i < zarn.CheckedItems.Count; i++)
                 currbook.Tags.Add(zarn.CheckedItems[i].ToString());
             currbook.ImageIndex = 3;
-            MessageBox.Show("Information updated");
+            if (sender!=null)
+                MessageBox.Show("Information updated");
         }
 
         private void isDone_Tick(object sender, EventArgs e)
