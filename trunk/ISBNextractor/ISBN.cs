@@ -68,9 +68,12 @@ namespace ISBNextractor
             pos = fileString.IndexOf("ISBN");
             filtriran = fileString.Substring(pos + 4, 30).Replace(":", "").Replace(" ", "").Replace("-", "").Trim();
             m = exp.Match(filtriran);
+            String valu = m.Value;
+            if (valu.StartsWith("97"))
+                valu = filtriran.Substring(0, 13);
 
-            return (m.Success) ? m.Value : "nomatch";
-         }
+            return (m.Success) ? valu : "nomatch";
+        }
 
    /* Very rare better to do it manually    
     * if (fileString.Contains("International Standard Book Number"))

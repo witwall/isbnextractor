@@ -55,7 +55,10 @@ namespace ISBNextractor
 
         private void Add_Click(object sender, EventArgs e)
         {
-            booklist.SelectedItems[0].Remove();
+            foreach (Book item in booklist.SelectedItems)
+                booklist.Items.Remove(item);
+
+           // booklist.SelectedItems[0].Remove();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -530,8 +533,8 @@ namespace ISBNextractor
                     Thread grabData = new Thread(new ParameterizedThreadStart(ProcessBook));
                     grabData.Start(new object[] { (Book)booklist.Items[procId], procId });
                     procId++;
-                }  else { isDone.Stop(); return;  }
-                ReCheck_Click(sender, e);
+                }
+                else { isDone.Stop(); ReCheck_Click(sender, e); return; }
             }
         }
 

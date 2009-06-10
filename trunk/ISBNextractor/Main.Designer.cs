@@ -40,6 +40,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.ReCheck = new System.Windows.Forms.ToolStripButton();
             this.saveBooks = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.openButt = new System.Windows.Forms.ToolStripButton();
@@ -90,7 +91,6 @@
             this.propAbstract = new System.Windows.Forms.RichTextBox();
             this.isDone = new System.Windows.Forms.Timer(this.components);
             this.saveTimer = new System.Windows.Forms.Timer(this.components);
-            this.ReCheck = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -108,7 +108,6 @@
             // 
             this.booklist.ContextMenuStrip = this.contextMenuStrip1;
             this.booklist.Location = new System.Drawing.Point(1, 32);
-            this.booklist.MultiSelect = false;
             this.booklist.Name = "booklist";
             this.booklist.Size = new System.Drawing.Size(318, 410);
             this.booklist.SmallImageList = this.stateImages;
@@ -204,6 +203,16 @@
             this.toolStripButton2.Size = new System.Drawing.Size(26, 26);
             this.toolStripButton2.Text = "Start Processing";
             this.toolStripButton2.Click += new System.EventHandler(this.StartProcessing_Click);
+            // 
+            // ReCheck
+            // 
+            this.ReCheck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ReCheck.Image = ((System.Drawing.Image)(resources.GetObject("ReCheck.Image")));
+            this.ReCheck.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ReCheck.Name = "ReCheck";
+            this.ReCheck.Size = new System.Drawing.Size(26, 26);
+            this.ReCheck.Text = "ReCheck Books";
+            this.ReCheck.Click += new System.EventHandler(this.ReCheck_Click);
             // 
             // saveBooks
             // 
@@ -670,16 +679,6 @@
             // saveTimer
             // 
             this.saveTimer.Tick += new System.EventHandler(this.saveTimer_Tick);
-            // 
-            // ReCheck
-            // 
-            this.ReCheck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ReCheck.Image = ((System.Drawing.Image)(resources.GetObject("ReCheck.Image")));
-            this.ReCheck.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ReCheck.Name = "ReCheck";
-            this.ReCheck.Size = new System.Drawing.Size(26, 26);
-            this.ReCheck.Text = "ReCheck Books";
-            this.ReCheck.Click += new System.EventHandler(this.ReCheck_Click);
             // 
             // Main
             // 
