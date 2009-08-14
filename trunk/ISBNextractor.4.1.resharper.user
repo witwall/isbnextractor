@@ -1,0 +1,71 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer>
+      <setting name="UsedSolutionBuilderID">0</setting>
+    </integer>
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:PDFParser.cs" caret="167" scrollPosition="0|0" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:CHMParser.cs" caret="2303" scrollPosition="0|44" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Program.cs" caret="0" scrollPosition="0|0" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:ISBN.cs" caret="2840" scrollPosition="0|81" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Main.cs" caret="18554" scrollPosition="0|499" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="19164" scrollPosition="0|516" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="16713" scrollPosition="0|413" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="16055" scrollPosition="0|413" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="15455" scrollPosition="0|401" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="19151" scrollPosition="0|505" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="19400" scrollPosition="0|526" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="3010" scrollPosition="0|91" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="6804" scrollPosition="0|244" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="10709" scrollPosition="0|306" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="2707" scrollPosition="0|91" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="3726" scrollPosition="0|126" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="19292" scrollPosition="0|514" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="4927" scrollPosition="0|186" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="6673" scrollPosition="0|228" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="5863" scrollPosition="0|228" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Main.cs" caret="10295" scrollPosition="0|278" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Main.cs" caret="8415" scrollPosition="0|244" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="19843" scrollPosition="0|519" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Book.cs" caret="10411" scrollPosition="0|323" />
+      <File id="188F4E5B-6F71-46A6-AD12-FF5B4178C4A4/f:Main.cs" caret="18554" scrollPosition="0|499" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <EnableUnitTesting>True</EnableUnitTesting>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="abstrakt" priority="0" />
+      <Item value="citac" priority="0" />
+      <Item value="autori" priority="1" />
+      <Item value="return" priority="0" />
+      <Item value="authors" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="a" priority="1" />
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlTextReader">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="Clear" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
